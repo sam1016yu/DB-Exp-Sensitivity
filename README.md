@@ -5,3 +5,33 @@ This is the repository for VLDB'22 submission ***A Study of Database Performance
 ## Testbed hardware configurations
 
 see [hardware_config](hardware_config.md)
+
+## Source code
+
+Please see the README in each folder to see how to setup environment, build and run each work. 
+
+## Settings corresponding to figures in the paper
+
+*add file specifically for the settings used in each figures, and link to the file here*
+
+### TPC-C
+
+- 1a: [Silo (32 worker threads)]()
+- 1b: [Aria (12 worker threads and default cross-warehouse rate)]()
+- 1c: [Aria (12 worker threads and default cross-warehouse rate)]()
+- 1d: [Cicada (default cross-warehouse rate)]()
+- 1e: [Star (12 worker threads per node)]()
+- 1f: [GAM (4 worker threads per node)]()
+- 3: [Throughput of Janus and 2PL with extra network latencies (6 warehouses and default cross-warehouse rate)]()
+- 4: [Throughputs of H2 with interactive transactions and stored procedure]()
+- 5a : [Silo (#warehouse=#worker and no cross-warehouse transactions).]()
+- 5b: [Cicada (#warehouse=#worker and default cross-warehouse rate)]()
+- 5c: [Janus (6 warehouses and default cross-warehouse rate).]()
+
+### YCSB
+- 6a: [Cicada with 50% reads and 10M KVs]()
+- 6b: [Cicada with 50% reads and 40M KVs]()
+- 6c: [Cicada with 95% reads and 10M KVs]()
+- 6d: [HERD with uniform distribution]()
+- 6e: [HERD with Zipfian (0.99)]()
+- 6f: [TAPIR with 50% read and Zipfian (0.99)]()
