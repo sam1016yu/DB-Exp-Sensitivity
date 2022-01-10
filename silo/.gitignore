@@ -1,0 +1,11 @@
+*.o
+*.swp
+*.heap
+*.so
+core
+tags
+config.mk
+out-*
+*.out
+*.vscode
+jemalloc.stats

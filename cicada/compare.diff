@@ -1,0 +1,42 @@
+306a307,309
+> #['MICA+INDEX', #'MICA+FULLINDEX',
+>               #'SILO', 'TICTOC', 'HEKATON', 'NO_WAIT',
+> 
+308,320c311,321
+<   all_algs = ['MICA+INDEX', #'MICA+FULLINDEX',
+<               'SILO', 'TICTOC', 'HEKATON']
+<             #   'SILO-REF',
+<             #   # 'SILO-REF-BACKOFF',
+<             #   #'ERMIA-SI-REF',
+<             #   #'ERMIA-SSI-REF',
+<             #   'ERMIA-SI_SSN-REF',
+<             #   # 'ERMIA-SI-REF-BACKOFF',
+<             #   # 'ERMIA-SSI-REF-BACKOFF',
+<             #   # 'ERMIA-SI_SSN-REF-BACKOFF',
+<             #   'FOEDUS-MOCC-REF',
+<             #   'FOEDUS-OCC-REF',
+<             #  ]
+---
+>   all_algs =  ['NO_WAIT', 'SILO-REF',
+>               # 'SILO-REF-BACKOFF',
+>               #'ERMIA-SI-REF',
+>               #'ERMIA-SSI-REF',
+>               'ERMIA-SI_SSN-REF',
+>               # 'ERMIA-SI-REF-BACKOFF',
+>               # 'ERMIA-SSI-REF-BACKOFF',
+>               # 'ERMIA-SI_SSN-REF-BACKOFF',
+>               'FOEDUS-MOCC-REF',
+>               'FOEDUS-OCC-REF',
+>              ]
+394c395
+<             tpcc.update({ 'warehouse_count': warehouse_count*4})
+---
+>             tpcc.update({ 'warehouse_count': warehouse_count*2})
+396c397
+<          """
+---
+>         """
+447a449
+>     
+449d450
+< 

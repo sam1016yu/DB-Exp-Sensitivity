@@ -1,6 +1,6 @@
 # DB-Exp-Sensitivity
 
-This is the repository for VLDB'22 submission *A Study of Database Performance Sensitivity to Experiment Settings*.
+This is the repository for VLDB'22 submission ***A Study of Database Performance Sensitivity to Experiment Settings***.
 
 ## Testbed hardware configurations
 

@@ -1,0 +1,13 @@
+*.o
+*.d
+rundb
+exp_data*
+old_exp_data*
+core
+perf.dat*
+jemalloc.stats
+config.h
+silo
+ermia
+mica
+foedus_code

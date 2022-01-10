@@ -1,0 +1,7 @@
+[submodule "rrr"]
+	path = rrr
+	url = https://github.com/msmummy/rrr.git
+
+[submodule "dependencies/yaml-cpp"]
+	path = dependencies/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp/
