@@ -173,8 +173,7 @@ max_thread_count = None
 
 prefix = ''
 suffix = ''
-# total_seqs = 5
-total_seqs = 1
+total_seqs = 5
 max_retries = 3
 
 hugepage_count = {
