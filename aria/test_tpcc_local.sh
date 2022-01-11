@@ -54,32 +54,17 @@ test_ariaFB(){
 }
 
 
-tpcc_all(){
-    wh=10
-    for num_threads in 1 2 4 8 12
-    do
-    for dist in {0..100..10}
-    do
-            test_aria $wh $num_threads $dist
-            test_Bohm $wh $num_threads $dist
-            test_Pwv $wh $num_threads $dist
-            for locks in 1 2 4 6
-            do
-                if [ $(($locks+1)) -gt $num_threads ]
-                then
-                    continue
-                fi
-                test_Calvin $wh $num_threads $dist $locks
-                test_ariaFB $wh $num_threads $dist $locks
-            done
-        done
-    done
-}
 
-mkdir -p ./logs
-
-for run in 1 2 3
-do
-tpcc_all 2>&1 | tee -a ./logs/tpcc_new_run${run}.out
-done
+warehouse=$1 # number of warehouses
+num_threads=$2 # number of worker threads
+dist=$3 # number of distributed txns
+locks=$4 # number of locks
+test_aria $wh $num_threads $dist
+test_Bohm $wh $num_threads $dist
+test_Pwv $wh $num_threads $dist
+if [ $(($locks)) -lt $num_threads ]
+then
+    test_Calvin $wh $num_threads $dist $locks
+    test_ariaFB $wh $num_threads $dist $locks
+fi
 

@@ -8,7 +8,7 @@ see [hardware_config](hardware_config.md)
 
 ## Source code
 
-Please see the README in each folder to see how to setup environment, build and run each work. 
+Please refer to the README in each folder to see how to setup environment, build and run each work. 
 
 ## Settings corresponding to figures in the paper
 
@@ -17,8 +17,8 @@ Please see the README in each folder to see how to setup environment, build and 
 ### TPC-C
 
 - 1a: [Silo (32 worker threads)]()
-- 1b: [Aria (12 worker threads and default cross-warehouse rate)]()
-- 1c: [Aria (12 worker threads and default cross-warehouse rate)]()
+- 1b: [Aria (12 worker threads and default cross-warehouse rate)](aria/settings_1b.sh)
+- 1c: [Janus (default cross-warehouse rate).]()
 - 1d: [Cicada (default cross-warehouse rate)]()
 - 1e: [Star (12 worker threads per node)]()
 - 1f: [GAM (4 worker threads per node)]()
