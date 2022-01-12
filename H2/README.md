@@ -50,12 +50,11 @@ cd benchbase-x-SNAPSHOT
 cd benchbase-x-SNAPSHOT/config
 mkdir h2
 ```
-* Then, copy sample_tpcc_config.xml into this h2 folder. Change the elements to your settings.
+* Then, copy sample_tpcc_config.xml into this h2 folder. Change the elements to your settings, like the IP address in url, username and password.
 
 5. Run the benchmark inside the benchbase-x-SNAPSHOT$ directory:
 ```bash
 java -jar benchbase.jar -b tpcc -c config/h2/sample_tpcc_config.xml --create=true --load=true --execute=true -d [output_file]
 ```
-
-6. Benchbase provides more details about how to run. Please refer to it for details.
+* Benchbase provides more details about how to run. Please refer to it for details.
 
