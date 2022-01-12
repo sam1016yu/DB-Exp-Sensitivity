@@ -13,7 +13,7 @@ java -cp h2*.jar org.h2.tools.Server -tcp -tcpAllowOthers -ifNotExists -tcpPassw
 ```
 4. Install stored procedures. In H2, Java functions can be used as stored procedures(SP). A function must be declared (registered) before it can be used. There are two different ways. We choose to define functions using source code. Details about SP in H2 can be found [here](http://www.h2database.com/html/features.html#user_defined_functions). 
 
-    Following is the command in H2 to install functions(.sql file)
+    Following is the command to install functions(.sql file) into H2 database:
 ```bash
 java -cp h2*.jar org.h2.tools.RunScript -url "jdbc:h2:tcp://[server IP address]:9092/mem:benchbase;DB_CLOSE_DELAY=-1" -user [yourusername] -password [yourpassword] -script [.sql_filename]
 ```
