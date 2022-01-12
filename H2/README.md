@@ -6,7 +6,7 @@ H2
 3. Start the H2 TCP Server by executing following commands at the server machine:
 ```bash
 cd h2/bin
-java -cp h2/bin/h2*.jar org.h2.tools.Server -tcp -tcpAllowOthers -ifNotExists -tcpPassword 'yourpasswordhere' &
+java -cp h2*.jar org.h2.tools.Server -tcp -tcpAllowOthers -ifNotExists -tcpPassword 'yourpasswordhere' &
 ```
 4. When you need to stop the H2 server:
 ```bash
