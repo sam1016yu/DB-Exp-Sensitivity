@@ -12,7 +12,6 @@ Please refer to the README in each folder to see how to setup environment, build
 
 ## Settings corresponding to figures in the paper
 
-*add file specifically for the settings used in each figures, and link to the file here*
 
 ### TPC-C
 
