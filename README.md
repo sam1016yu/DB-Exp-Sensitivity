@@ -20,7 +20,7 @@ Please refer to the README in each folder to see how to setup environment, build
 - 1b: [Aria (12 worker threads and default cross-warehouse rate)](aria/settings_1b.sh)
 - 1c: [Janus (default cross-warehouse rate).](janus/run_batch.sh)
 - 1d: [Cicada (default cross-warehouse rate)](cicada/run_exp_custom.py)
-- 1e: [Star (12 worker threads per node)]()
+- 1e: [Star (12 worker threads per node)](star/run-star.sh)
 - 1f: [GAM (4 worker threads per node)](gam/database/tpcc/run-gam.sh)
 - 3: [Throughput of Janus and 2PL with extra network latencies (6 warehouses and default cross-warehouse rate)](janus/run_batch.sh)
 - 4: [Throughputs of H2 with interactive transactions and stored procedure]()
