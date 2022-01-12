@@ -50,4 +50,4 @@ cd benchbase-x-SNAPSHOT
 cd benchbase-x-SNAPSHOT/config
 mkdir h2
 ```
-Then, copy sample_tpcc_config.xml into this h2 folder
+* Then, copy sample_tpcc_config.xml into this h2 folder. Change specific items to your setting.
