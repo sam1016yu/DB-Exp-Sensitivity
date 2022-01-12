@@ -25,7 +25,8 @@ class ServerConf:
         for port in self.ports:
             f.write('server_port,%s,%s\n' % port)
         for thread in self.threads:
-            f.write('server_thread,%s\n' % ' '.join([str(port_id) for port_id in thread]))
+            #f.write('server_thread,%s\n' % ' '.join([str(port_id) for port_id in thread]))
+            f.write('server_thread,0 0 0 0\n')
         for partition in self.partitions:
             f.write('server_partition,%s,%s,%s,%s,%s,%s,%s\n' % partition)
         for hot_item in self.hot_items:
@@ -77,8 +78,10 @@ class WorkloadConf:
     def write(self, f):
         f.write('workload,%s\n' % self.client_name)
         for thread in self.threads:
+            #f.write('workload_thread,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n' % (
+                #' '.join([str(port_id) for port_id in thread[0]]),
             f.write('workload_thread,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n' % (
-                ' '.join([str(port_id) for port_id in thread[0]]),
+                '0 0 0 0',
                 thread[1],
                 thread[2],
                 thread[3],
@@ -97,7 +100,9 @@ class WorkloadConf:
 def init_addr():
     global _last_addr_id
     _last_addr_id = 0
+    #_last_addr_id = 1
 
+mac_set = ["NULL", "90:e2:ba:87:6b:84", "90:e2:ba:26:f0:b4", "90:e2:ba:38:37:c8"]
 def next_addr():
     global _last_addr_id
 
@@ -105,6 +110,7 @@ def next_addr():
     _last_addr_id += 1
 
     mac_addr = '80:00:00:00:00:{:02}'.format(addr_id)
+    #mac_addr = mac_set[addr_id]
     ip_addr = '10.0.0.{}'.format(addr_id)
     return mac_addr, ip_addr
 
@@ -208,7 +214,8 @@ def main():
                 f = open('conf_machines_%s_%s_%s' % (dataset, concurrency.name, mth_threshold), 'w')
 
                 s = ServerConf('server')
-                for port_id in range(8):
+                #for port_id in range(8):
+                for port_id in range(1):
                     s.add_port(*next_addr())
                 for thread_id in range(0, 16, 2):
                     s.add_thread(list(range(0, 4)))
@@ -227,14 +234,16 @@ def main():
                 s.write(f)
 
                 c0 = ClientConf('client0')
-                for port in range(4):
+                #for port in range(4):
+                for port in range(1):
                     c0.add_port(*next_addr())
                 for thread_id in range(12):
                     c0.add_thread()
                 c0.write(f)
 
                 c1 = ClientConf('client1')
-                for port in range(4):
+                #for port in range(4):
+                for port in range(1):
                     c1.add_port(*next_addr())
                 for thread_id in range(12):
                     c1.add_thread()

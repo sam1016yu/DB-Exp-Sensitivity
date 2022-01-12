@@ -54,7 +54,7 @@ set(SOURCES ${SOURCES} stopwatch.c)
 set(SOURCES ${SOURCES} shm.c)
 
 # common libraries
-set(LIBRARIES ${LIBRARIES} rt crypto perf_count m pthread)
+set(LIBRARIES ${LIBRARIES} rt crypto perf_count m pthread dl)
 
 # tcmalloc (optional)
 #add_definitions(-fno-builtin-malloc -fno-builtin-calloc -fno-builtin-realloc -fno-builtin-free)

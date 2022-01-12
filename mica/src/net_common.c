@@ -412,7 +412,7 @@ mehcached_init_network(uint64_t cpu_mask, uint64_t port_mask, uint8_t *out_num_p
 	assert(num_ports <= MEHCACHED_MAX_PORTS);
 	*out_num_ports = num_ports;
 
-	printf("checking queue limits\n");
+	printf("checking queue limits, #queue = %d\n", num_queues);
 	uint8_t port_id;
 	for (port_id = 0; port_id < num_ports; port_id++)
 	{

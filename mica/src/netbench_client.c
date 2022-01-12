@@ -381,14 +381,17 @@ mehcached_client_send_packet(struct client_state *state, struct packet_construct
 
 	// XXX: hardcode to detect the destination server port
 	uint8_t server_port_id;
+	// Fang changed
 	if (state->client_conf->ports[0].ip_addr[3] < 12)	// client0?
 	{
-		const uint8_t sp[] = {0, 1, 4, 5};
+		//const uint8_t sp[] = {0, 1, 4, 5};
+		const uint8_t sp[] = {0, 0, 0, 0};
 		server_port_id = sp[port_id];
 	}
 	else
 	{
-		const uint8_t sp[] = {2, 3, 6, 7};
+		//const uint8_t sp[] = {2, 3, 6, 7};
+		const uint8_t sp[] = {0, 0, 0, 0};
 		server_port_id = sp[port_id];
 	}
 
@@ -1066,11 +1069,12 @@ mehcached_benchmark_client(const char *machine_filename, const char *client_name
 	char *rte_argv[] = {"",
 		"-c", cpu_mask_str,
 		"-n", "3",	// 3 for client0/1
+        "-b", "0000:06:00.1",
 	};
 	int rte_argc = sizeof(rte_argv) / sizeof(rte_argv[0]);
 
-    //rte_set_log_level(RTE_LOG_DEBUG);
-    rte_set_log_level(RTE_LOG_NOTICE);
+    rte_set_log_level(RTE_LOG_DEBUG);
+    //rte_set_log_level(RTE_LOG_NOTICE);
 
 	int ret = rte_eal_init(rte_argc, rte_argv);
 	if (ret < 0)

@@ -1370,7 +1370,7 @@ mehcached_benchmark_server(const char *machine_filename, const char *server_name
         "-c", cpu_mask_str,
         "-n", "4",    // 4 for server 
         "-m", memory_str,
-        "-b", "0000:06:00.0",
+        //"-b", "0000:06:00.0",
         "-b", "0000:06:00.1",
     };
     int rte_argc = sizeof(rte_argv) / sizeof(rte_argv[0]);
@@ -1400,10 +1400,12 @@ mehcached_benchmark_server(const char *machine_filename, const char *server_name
     for (port_id = 0; port_id < server_conf->num_ports; port_id++)
     {
         struct ether_addr mac_addr;
+		int ret = 0;
         memcpy(&mac_addr, server_conf->ports[port_id].mac_addr, sizeof(struct ether_addr));
-        if (rte_eth_dev_mac_addr_add(port_id, &mac_addr, 0) != 0)
+        ret = rte_eth_dev_mac_addr_add(port_id, &mac_addr, 0);
+        if (ret != 0)
         {
-            fprintf(stderr, "failed to add a MAC address\n");
+            fprintf(stderr, "failed to add a MAC address. Error code: %d\n", ret);
             return;
         }
     }

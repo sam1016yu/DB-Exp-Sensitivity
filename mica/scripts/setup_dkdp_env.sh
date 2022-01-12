@@ -265,8 +265,11 @@ load_igb_uio_module
 
 grep_meminfo
 
-sudo $RTE_SDK/tools/pci_unbind.py --force --bind=igb_uio xge0 xge1 xge2 xge3
-sudo $RTE_SDK/tools/pci_unbind.py --force --bind=igb_uio xge4 xge5 xge6 xge7
+
+#sudo $RTE_SDK/tools/pci_unbind.py --force --bind=igb_uio xge0 xge1 xge2 xge3
+#sudo $RTE_SDK/tools/pci_unbind.py --force --bind=igb_uio xge4 xge5 xge6 xge7
+sudo $RTE_SDK/tools/pci_unbind.py --force --bind=igb_uio 0000:06:00.0
+sudo $RTE_SDK/tools/pci_unbind.py --force --bind=igb_uio 0000:06:00.1
 
 # disable OOM kills
 sudo sysctl -w vm.overcommit_memory=1
