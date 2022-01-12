@@ -1,3 +1,3 @@
-This is the stored procedure function of OLTPBench TPC-C transactions.
+This is the stored procedure function corresponding to Benchbase TPC-C transactions.
 
 You can combine all transaction .sql files into one .sql file.
