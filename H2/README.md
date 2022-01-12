@@ -20,7 +20,7 @@ java -cp h2*.jar org.h2.tools.RunScript -url "jdbc:h2:tcp://[server IP address]:
 
 5. When you need to stop the H2 server:
 ```bash
-java org.h2.tools.Server -tcpShutdown tcp://[your IP address]:9092 -tcpPassword 'yourpassword'
+java org.h2.tools.Server -tcpShutdown tcp://[server IP address]:9092 -tcpPassword 'yourpassword'
 ```
 6. The H2 official [tutorial](http://www.h2database.com/html/tutorial.html#using_server) can also help you setup the server.
 
@@ -57,7 +57,7 @@ cd benchbase-x-SNAPSHOT
 cd benchbase-x-SNAPSHOT/config
 mkdir h2
 ```
-* Then, copy sample_tpcc_config.xml into this h2 folder. Change the elements to your settings, like the IP address in url, username and password.
+* Then, copy sample_tpcc_config.xml into this h2 folder. Change the elements to your settings, like the server IP address in url, username and password.
 
 5. Run the benchmark inside the benchbase-x-SNAPSHOT directory:
 ```bash
