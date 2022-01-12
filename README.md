@@ -32,6 +32,6 @@ Please refer to the README in each folder to see how to setup environment, build
 - 6a: [Cicada with 50% reads and 10M KVs](cicada/run_exp_custom.py)
 - 6b: [Cicada with 50% reads and 40M KVs](cicada/run_exp_custom.py)
 - 6c: [Cicada with 95% reads and 10M KVs](cicada/run_exp_custom.py)
-- 6d: [HERD with uniform distribution]()
-- 6e: [HERD with Zipfian (0.99)]()
+- 6d: [HERD with uniform distribution](HERD/run-herd.sh)
+- 6e: [HERD with Zipfian (0.99)](HERD/run-herd.sh)
 - 6f: [TAPIR with 50% read and Zipfian (0.99)](tapir/store/tools/settings_5f.sh)
