@@ -1,0 +1,73 @@
+diff --git a/original_drtm/Makefile b/original_drtm/Makefile
+index 3776f86..fc8b96c 100644
+--- a/original_drtm/Makefile
++++ b/original_drtm/Makefile
+@@ -1,6 +1,6 @@
+-OPT ?= -O2 -g2 -DNDEBUG      # (A) Production use (optimized mode)
++#OPT ?= -O2 -g2 -DNDEBUG      # (A) Production use (optimized mode)
+ #OPT ?= -O2 -g2 -DNDEBUG -funroll-all-loops
+-#OPT ?= -g2              # (B) Debug mode, w/ full line-level debugging symbols
++OPT ?= -g2              # (B) Debug mode, w/ full line-level debugging symbols
+ #OPT ?= -O2 -fno-omit-frame-pointer -g2 -DNDEBUG # (C) Profiling mode: opt, but w/debugging symbols
+ #-----------------------------------------------
+ 
+diff --git a/original_drtm/oltp/simple.cc b/original_drtm/oltp/simple.cc
+index efde5ed..5ac2bd3 100755
+--- a/original_drtm/oltp/simple.cc
++++ b/original_drtm/oltp/simple.cc
+@@ -245,6 +245,17 @@ protected:
+             }
+         }
+ 
++        for (uint32_t i = get_start_wid(); i <= get_end_wid(); i ++) {
++            for (uint32_t j = 1; j <= g_records_per_thread; j ++) {
++                uint64_t key = make_simple_key(i, j);
++                uint64_t *val = store->Get(TABLE_SIMPLE, key);
++                if (*val != 0) {
++                    printf("AHA\n");
++                }
++            }
++        }
++
++
+         if (verbose) {
+             cerr << "[INFO] finished loading simple" << endl;
+         }
+@@ -431,11 +442,14 @@ simple_worker::txn_result simple_worker::txn_simple() {
+ 
+         s.insert(key);
+ 
++        fprintf(stderr, "warehouse_id = %ld, district_id = %ld, key = %ld\n", warehouse_id, district_id, key);
++
+         buf[i] = new char[META_LENGTH + 128];
+         memset(buf[i], 0, 128 + (META_LENGTH) * sizeof(char));
+         sstx.AddToRemoteReadSet(TABLE_SIMPLE, key, next_partition_id, (uint64_t *)buf[i]); 
+     }
+ 
++#if 0
+     for (int i = g_reads_per_txn; i < g_reads_per_txn + g_writes_per_txn; i ++) {
+         uint32_t district_id;
+         uint64_t key;
+@@ -450,16 +464,18 @@ simple_worker::txn_result simple_worker::txn_simple() {
+         memset(buf[i], 0, 128 + (META_LENGTH) * sizeof(char));
+         sstx.AddToRemoteWriteSet(TABLE_SIMPLE, key, next_partition_id, (uint64_t *)buf[i]); 
+     }
+-
++#endif
+     uint64_t endtime = timestamp + DEFAULT_INTERVAL;//remote timestamps
+     sstx.PrefetchAllRemote(endtime);
+-    
++
++#if 0    
+     for (int i = g_reads_per_txn; i < g_reads_per_txn + g_writes_per_txn; i ++) {
+         // The first 8 bytes is the lock field
+-        //*((uint64_t *)buf[i] + 1) += 1;
++        *((uint64_t *)buf[i] + 1) += 1;
+         *((uint64_t *)&(buf[i][8])) += 1;
+     }
+-    
++#endif
++
+     // if the write set is empty, this funtion does nothing
+     sstx.RemoteWriteBack();
+         
