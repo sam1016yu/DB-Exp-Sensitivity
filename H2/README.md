@@ -23,14 +23,18 @@ OLTPBench Setup
 * The repository has moved to [Benchbase](https://github.com/cmu-db/benchbase/tree/main).
 
 1. Clone OLTPBench(Benchbase):
+```bash
 git clone --depth 1 https://github.com/cmu-db/benchbase.git
+```
 
 2. Add H2 database dependency in pom.xml:
+```bash
 <dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>
     <version>1.4.200</version>
 </dependency>
+```
 
 3. Build Benchbase:
 ```bash
