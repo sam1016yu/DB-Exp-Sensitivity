@@ -9,11 +9,11 @@ unzip h2-2019-10-14.zip
 3. Start the H2 TCP Server by executing following commands at the server machine:
 ```bash
 cd h2/bin
-java -cp h2*.jar org.h2.tools.Server -tcp -tcpAllowOthers -ifNotExists -tcpPassword 'yourpasswordhere' &
+java -cp h2*.jar org.h2.tools.Server -tcp -tcpAllowOthers -ifNotExists -tcpPassword 'yourpassword' &
 ```
 4. When you need to stop the H2 server:
 ```bash
-java org.h2.tools.Server -tcpShutdown tcp://[your IP address]:9092 -tcpPassword 'yourpasswordhere'
+java org.h2.tools.Server -tcpShutdown tcp://[your IP address]:9092 -tcpPassword 'yourpassword'
 ```
 5. The H2 official [tutorial](http://www.h2database.com/html/tutorial.html#using_server) can also help you setup the server.
 
