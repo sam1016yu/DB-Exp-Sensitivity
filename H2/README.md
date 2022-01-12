@@ -11,11 +11,18 @@ unzip h2-2019-10-14.zip
 cd h2/bin
 java -cp h2*.jar org.h2.tools.Server -tcp -tcpAllowOthers -ifNotExists -tcpPassword 'yourpassword' &
 ```
-4. When you need to stop the H2 server:
+4. Install stored procedures. In H2, Java functions can be used as stored procedures(SP). A function must be declared (registered) before it can be used. There are two different ways. We choose to define functions using source code. Details about SP in H2 can be found [here](http://www.h2database.com/html/features.html#user_defined_functions). 
+
+Following is the command in H2 to install functions(.sql file)
+```bash
+java -cp h2*.jar org.h2.tools.RunScript -url "jdbc:h2:tcp://10.10.1.1:9092/mem:benchbase;DB_CLOSE_DELAY=-1" -user [yourusername] -password [yourpassword] -script [.sql_filename]
+```
+
+5. When you need to stop the H2 server:
 ```bash
 java org.h2.tools.Server -tcpShutdown tcp://[your IP address]:9092 -tcpPassword 'yourpassword'
 ```
-5. The H2 official [tutorial](http://www.h2database.com/html/tutorial.html#using_server) can also help you setup the server.
+6. The H2 official [tutorial](http://www.h2database.com/html/tutorial.html#using_server) can also help you setup the server.
 
 OLTPBench Setup
 ====
