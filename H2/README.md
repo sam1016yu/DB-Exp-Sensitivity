@@ -12,3 +12,4 @@ java -cp h2*.jar org.h2.tools.Server -tcp -tcpAllowOthers -ifNotExists -tcpPassw
 ```bash
 java org.h2.tools.Server -tcpShutdown tcp://[your IP address]:9092 -tcpPassword 'yourpasswordhere'
 ```
+5. The H2 official [tutorial](http://www.h2database.com/html/tutorial.html#using_server) can also help you setup the server.
