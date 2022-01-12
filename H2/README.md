@@ -10,5 +10,5 @@ java -cp h2*.jar org.h2.tools.Server -tcp -tcpAllowOthers -ifNotExists -tcpPassw
 ```
 4. When you need to stop the H2 server:
 ```bash
-java org.h2.tools.Server -tcpShutdown tcp://128.105.144.233:9092 -tcpPassword 'yourpasswordhere'
+java org.h2.tools.Server -tcpShutdown tcp://[your IP address]:9092 -tcpPassword 'yourpasswordhere'
 ```
