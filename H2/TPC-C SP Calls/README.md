@@ -1,5 +1,7 @@
-These are TPC-C transactions that are transformd from OLTPBench transactions to call the stored procedures in H2 server.
+* These are TPC-C transactions that are transformd from Benchbase transactions to call the stored procedures in H2 server.
 
-When executing the TPC-C stored procedures, replace original transaction files in Benchbase with these SP-calls files in folder: 
+* When executing TPC-C stored procedures, replace original transaction files in Benchbase with these SP-call files in the folder below: 
 
+```bash
 benchbase/src/main/java/com/oltpbenchmark/benchmarks/tpcc/procedures/
+```
