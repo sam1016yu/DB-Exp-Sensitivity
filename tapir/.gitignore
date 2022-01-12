@@ -1,0 +1,75 @@
+.obj/
+
+lockserver/client-main
+lockserver/server-main
+lockserver/lockserver-repl
+store/benchmark/benchClient
+store/benchmark/retwisClient
+store/benchmark/terminalClient
+store/strongstore/server
+store/tapirstore/server
+store/weakstore/server
+timeserver/timeserver
+
+lib/tests/configuration-test
+lib/tests/simtransport-test
+lockserver/tests/lockserver-test
+replication/ir/tests/ir-test
+replication/vr/tests/vr-test
+store/common/backend/tests/kvstore-test
+store/common/backend/tests/lockserver-test
+store/common/backend/tests/versionstore-test
+
+################################################################################
+# vim
+################################################################################
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+
+# Temporary
+.netrwhist
+*~
+# Auto-generated tag files
+tags
+
+################################################################################
+# c++
+################################################################################
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app

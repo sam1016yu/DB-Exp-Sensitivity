@@ -1,0 +1,10 @@
+Unknown argument -s
+Unknown argument -c
+20210201-003309-9078 22598 PANIC Read            (persistent_register.cc:78): Unable to read file node0:51736_0.bin
+20210201-003309-9079 22598 ! _Panic          (message.cc:173):   /users/hyyyy/tapir/store/tapirstore/server(+0x13190) [0x55c99c832190]
+20210201-003309-9079 22598 ! _Panic          (message.cc:173):   /users/hyyyy/tapir/store/tapirstore/server(+0x2e337) [0x55c99c84d337]
+20210201-003309-9079 22598 ! _Panic          (message.cc:173):   /users/hyyyy/tapir/store/tapirstore/server(+0x19638) [0x55c99c838638]
+20210201-003309-9079 22598 ! _Panic          (message.cc:173):   /users/hyyyy/tapir/store/tapirstore/server(+0x19ef0) [0x55c99c838ef0]
+20210201-003309-9079 22598 ! _Panic          (message.cc:173):   /users/hyyyy/tapir/store/tapirstore/server(+0xbd94) [0x55c99c82ad94]
+20210201-003309-9079 22598 ! _Panic          (message.cc:173):   /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f00663fdbf7]
+20210201-003309-9079 22598 ! _Panic          (message.cc:173):   /users/hyyyy/tapir/store/tapirstore/server(+0xc1ba) [0x55c99c82b1ba]

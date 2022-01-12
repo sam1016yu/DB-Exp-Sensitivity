@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite hostname="node0.hyyyy-qv92870.osu-nfs-test-pg0.wisc.cloudlab.us" failures="0" tests="1" name="com.yahoo.ycsb.TestByteIterator" time="0.01" errors="0" timestamp="11 Mar 2021 04:55:37 GMT">
+  <testcase classname="com.yahoo.ycsb.TestByteIterator" name="testRandomByteIterator" time="0.005"/>
+</testsuite>

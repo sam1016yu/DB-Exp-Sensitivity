@@ -1,0 +1,4 @@
+f 1
+replica node1:28183
+replica node2:28183
+replica node3:28183
