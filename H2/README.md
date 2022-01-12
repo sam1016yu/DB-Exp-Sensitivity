@@ -1,7 +1,7 @@
 H2
 ====
 
-1. Download H2 database from its official website or use the [download](http://www.h2database.com/html/download-archive.html) link here. The H2 version tested in our paper is 1.4.200.
+1. Download H2 database from its official [download](http://www.h2database.com/html/download-archive.html) link or use the zip file in this folder. The H2 version tested in our paper is 1.4.200.
 2. Install the H2 database following its [guide](http://www.h2database.com/html/installation.html).
 3. Start the H2 TCP Server by executing following commands at the server machine:
 ```bash
