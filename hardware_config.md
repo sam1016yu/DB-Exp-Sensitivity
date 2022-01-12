@@ -182,7 +182,7 @@
     <td class="tg-nrix">H2</td>
     <td class="tg-nrix">c220g5</td>
     <td class="tg-nrix">2 x Intel Xeon Silver 4114 10-core CPUs at 2.20 GHz</td>
-    <td class="tg-nrix">192GB ECC DDR4-2666 Memory</td>
+    <td class="tg-nrix">192GB ECC DDR4-2666</td>
     <td class="tg-nrix">One 1 TB 7200 RPM 6G SAS HDs, One Intel DC S3500 480 GB 6G SATA SSD</td>
     <td class="tg-nrix">Dual-port Intel X520-DA2 10Gb NIC (PCIe v3.0, 8 lanes), Onboard Intel i350 1Gb</td>
   </tr>
