@@ -12,7 +12,7 @@ Please refer to the README in each folder to see how to setup environment, build
 
 ## Settings, raw data and plot script for figures in the paper
 
-You can find the correlated raw data in the plot script.
+You can find the correlated raw data in the plot script. (All the plot script produced by [gnuplot](http://www.gnuplot.info))
 
 ### TPC-C
 
