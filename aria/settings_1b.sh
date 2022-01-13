@@ -57,7 +57,7 @@ test_ariaFB(){
 tpcc_all(){
     for wh in 1 2 4 6 8 10 12 36 60 84 108 132 156 180
         num_threads=12
-        dist=10
+        dist=15
         test_aria $wh $num_threads $dist
         test_Bohm $wh $num_threads $dist
         test_Pwv $wh $num_threads $dist

@@ -1,0 +1,43 @@
+set size 1.5,1.5
+set terminal postscript eps color solid "Helvetica" 48
+set pointsize 3
+set output "tapir-max-throughput.eps"
+
+
+
+set key samplen 2
+set xlabel "Number of KVs"
+set xrange [0:45e6]
+set xtics 10e6
+set format x '%.s%c'
+set format y '%.s%c'
+set ylabel "Throughput (txn/sec)"
+
+set style line 2 lt 2 lw 7
+set style line 1 lt 1 lw 7
+
+set arrow from 34e6,22e3 to 30.2e6,20.2e3 lw 5
+
+set label "Page migration disabled" at 12.5e6,23e3
+
+set label "(original)" at 3e6,14e3
+
+
+set label "(new)" at 23.5e6, 18e3
+set arrow from 23e6, 17.5e3 to 5.8e6, 21.5e3 lw 5   
+set arrow from 23e6, 17.5e3 to 10.9e6, 19.1e3 lw 5
+set arrow from 23e6, 17.5e3 to 20.3e6, 13.5e3 lw 5
+set arrow from 23e6, 17.5e3 to 39.5e6, 11.3e3 lw 5
+set arrow from 27e6, 18.8e3 to 20e6, 21e3 lw 5
+set arrow from 27e6, 18.8e3 to 39e6, 18e3 lw 5
+
+set arrow from 5e6,15e3 to 1e6,21.5e3 lw 5
+
+
+
+
+data_migration = "< (awk '{ if ($5 == 1) print $1, $2 }' tapir-max-throughput.dat)"
+data_no_migration = "< (awk '{ if ($5 == 0) print $1, $2 }' tapir-max-throughput.dat)"
+
+plot data_migration u 1:2 w linespoints ls 1 t "",\
+		data_no_migration u 1:2 w linespoints ls 2 t ""
