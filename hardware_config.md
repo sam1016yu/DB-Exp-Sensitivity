@@ -1,5 +1,6 @@
 # Hardware Configurations
 
+All node alias is for [Cloudlab](https://www.cloudlab.us/) except [OSC](https://www.osc.edu/) Owens.
 
 <table class="tg">
 <thead>
@@ -82,7 +83,7 @@
     <td class="tg-nrix">Mellanox ConnectX-3 56Gbps InfiniBand</td>
   </tr>
   <tr>
-    <td class="tg-nrix">Owens</td>
+    <td class="tg-nrix">OSC Owens</td>
     <td class="tg-nrix">2 x Intel E5-2680 v4 (14-core, 2.40 GHz)</td>
     <td class="tg-nrix">128GB</td>
     <td class="tg-nrix">1 x 1TB HDD</td>
