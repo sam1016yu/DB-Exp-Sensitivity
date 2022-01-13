@@ -31,7 +31,7 @@ You can find the correlated raw data in the plot script. (All the plot script pr
 - 3: Throughput of Janus and 2PL with extra network latencies (6 warehouses and default cross-warehouse rate)
   - [setting script](janus/run_batch.sh), [plot script](rawdata/janus/janus_6s2u_10ms_vs_100ms.p)
 - 4: Throughputs of H2 with interactive transactions and stored procedure
-  - [setting script](H2/README.md), [plot script](rawdata/h2/h2_whhistogram.p)
+  - [setting script](H2/), [plot script](rawdata/h2/h2_whhistogram.p)
 - 5a : Silo (#warehouse=#worker and no cross-warehouse transactions).
   - [setting script](silo/settings_5a.sh), [plot script](rawdata/silo/silo_tpcc_local_5vs2.p)
 - 5b: Cicada (#warehouse=#worker and default cross-warehouse rate)
