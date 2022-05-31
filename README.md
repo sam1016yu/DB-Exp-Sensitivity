@@ -1,6 +1,10 @@
 # DB-Exp-Sensitivity
 
-This is the artifact repository for VLDB'22 submission ***A Study of Database Performance Sensitivity to Experiment Settings***.
+[A Study of Database Performance Sensitivity to Experiment Settings](http://vldb.org/pvldb/vol15/p1439-wang.pdf)
+
+Yang Wang, Miao Yu, Yujie Hui, Fang Zhou, Yuyang Huang, Rui Zhu, Xueyuan Ren, Tianxi Li, and Xiaoyi Lu.
+
+**Proceedings of the VLDB Endowment, Vol. 15, No. 7**
 
 ## Testbed hardware configurations
 
